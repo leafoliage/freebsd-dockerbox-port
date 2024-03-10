@@ -15,12 +15,17 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	leafoliage
 GH_PROJECT=	freebsd-dockerbox
 
+NO_BUILD=	yes
+
+DISK_DISTNAME=	dockerbox-img
+DISKVERSION=	0.1.1
 MASTER_SITES=	https://github.com/leafoliage/freebsd-dockerbox/releases/download/disk-0.1.1/:diskimg
-DISTFILES=	dockerbox-img-0.1.1.tar.zstd:diskimg 
+DISTFILES=	${DISK_DISTNAME}-${DISKVERSION}.tar.zstd:diskimg 
+WRKSRC_DISKIMG=	${WRKDIR}/${DISK_DISTNAME}-${DISKVERSION}	
 
 post-extract:
 	@${MKDIR} ${WRKSRC}/share
-	@${MV} ${WRKDIR}/disk.img ${WRKSRC}/share
-	@${MV} ${WRKDIR}/device.map ${WRKSRC}/share
+	@${MV} ${WRKSRC_DISKIMG}/disk.img ${WRKSRC}/share
+	@${MV} ${WRKSRC_DISKIMG}/device.map ${WRKSRC}/share
 
 .include <bsd.port.mk>
