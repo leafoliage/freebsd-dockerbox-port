@@ -15,8 +15,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	leafoliage
 GH_PROJECT=	freebsd-dockerbox
 
-MASTER_SITES=	https://github.com/leafoliage/freebsd-dockerbox/releases/download/disk-0.1.0/:diskimg
-DISTFILES=	dockerbox-img.tar.gz:diskimg 
+MASTER_SITES=	https://github.com/leafoliage/freebsd-dockerbox/releases/download/disk-0.1.1/:diskimg
+DISTFILES=	dockerbox-img-0.1.1.tar.zstd:diskimg 
 
 post-extract:
 	@${MKDIR} ${WRKSRC}/share
