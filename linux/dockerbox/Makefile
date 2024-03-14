@@ -1,11 +1,14 @@
 PORTNAME=	dockerbox
-PORTVERSION=	0.1.3
+PORTVERSION=	0.1.4
 DISTVERSIONPREFIX=	v
-CATEGORIES=	sysutils	
+CATEGORIES=	sysutils
 
 MAINTAINER=	leafoliages@gmail.com
 COMMENT=	Docker daemon inside virtualized Linux
 WWW=		https://github.com/leafoliage/freebsd-dockerbox
+
+LICENSE=	BSD2CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	amd64
 
@@ -15,13 +18,14 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	leafoliage
 GH_PROJECT=	freebsd-dockerbox
 
-NO_BUILD=	yes
-
 DISK_DISTNAME=	dockerbox-img
 DISKVERSION=	0.1.1
-MASTER_SITES=	https://github.com/leafoliage/freebsd-dockerbox/releases/download/disk-0.1.1/:diskimg
-DISTFILES=	${DISK_DISTNAME}-${DISKVERSION}.tar.zstd:diskimg 
-WRKSRC_DISKIMG=	${WRKDIR}/${DISK_DISTNAME}-${DISKVERSION}	
+MASTER_SITES=	https://github.com/leafoliage/freebsd-dockerbox/releases/download/:diskimg
+DIST_SUBDIR=	disk-${DISKVERSION}
+DISTFILES=	${DISK_DISTNAME}-${DISKVERSION}.tar.zstd:diskimg
+WRKSRC_DISKIMG=	${WRKDIR}/${DISK_DISTNAME}-${DISKVERSION}
+
+NO_BUILD=	yes
 
 post-extract:
 	@${MKDIR} ${WRKSRC}/share
