@@ -1,0 +1,5 @@
+TIMESTAMP = 1710381957
+SHA256 (dockerbox-img-0.1.1.tar.zstd) = 78512a9e7c61371124db962ee0eceb83a5994a784290c33c25e798a9ea98e480
+SIZE (dockerbox-img-0.1.1.tar.zstd) = 1322854964
+SHA256 (leafoliage-freebsd-dockerbox-v0.1.4_GH0.tar.gz) = 532e1800a45882ec2a21e11cbf32d43cff47c7facb227dabbf7dca9e2f332a13
+SIZE (leafoliage-freebsd-dockerbox-v0.1.4_GH0.tar.gz) = 5193
