@@ -20,8 +20,7 @@ GH_PROJECT=	freebsd-dockerbox
 
 DISK_DISTNAME=	dockerbox-img
 DISKVERSION=	0.1.1
-MASTER_SITES=	https://github.com/leafoliage/freebsd-dockerbox/releases/download/:diskimg
-DIST_SUBDIR=	disk-${DISKVERSION}
+MASTER_SITES=   https://github.com/leafoliage/freebsd-dockerbox/releases/download/disk-${DISKVERSION}/:diskimg
 DISTFILES=	${DISK_DISTNAME}-${DISKVERSION}.tar.zstd:diskimg
 WRKSRC_DISKIMG=	${WRKDIR}/${DISK_DISTNAME}-${DISKVERSION}
 
