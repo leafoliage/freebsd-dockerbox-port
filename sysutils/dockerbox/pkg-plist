@@ -1,5 +1,3 @@
 etc/dockerbox/dockerbox.conf
 etc/rc.d/dockerbox
 sbin/dockerbox
-share/dockerbox/device.map
-share/dockerbox/disk.img
