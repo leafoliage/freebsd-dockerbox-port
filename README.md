@@ -6,12 +6,13 @@ This is the FreeBSD Port repository for [FreeBSD-Dockerbox](https://github.com/l
 
 ### Install from port
 
-> This port hasn't been added to official FreeBSD ports yet. Please copy port files into `/usr/ports` first.
+> This port hasn't been added to official FreeBSD ports yet. Please copy port files or mount directory into `/usr/ports` first.
 
-Copy `sysutils/dockerbox` to `/usr/ports/sysutils`.
+Null mount `sysutils/dockerbox` to `/usr/ports/sysutils/dockerbox`.
 
 ```sh
-cp -Ra sysutils/dockerbox /usr/ports/sysutils/
+mkdir /usr/ports/sysutils/dockerbox
+mount_nullfs sysutils/dockerbox /usr/ports/sysutils/dockerbox
 ```
 
 Make under `/usr/ports/sysutils/dockerbox`
