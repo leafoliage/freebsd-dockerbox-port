@@ -1,10 +1,10 @@
 PORTNAME=       dockerbox
-PORTVERSION=    0.2.0
+PORTVERSION=    0.2.1
 DISTVERSIONPREFIX=      v
 CATEGORIES=     sysutils
 
-MAINTAINER=     leafoliages@gmail.com
-COMMENT=        Docker daemon inside virtualized Linux
+MAINTAINER=     leafoliage@freebsd.org
+COMMENT=        Virtualized Docker daemon
 WWW=            https://github.com/leafoliage/freebsd-dockerbox
 
 LICENSE=        BSD2CLAUSE
