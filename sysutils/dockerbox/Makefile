@@ -1,5 +1,5 @@
 PORTNAME=       dockerbox
-PORTVERSION=    0.2.1
+PORTVERSION=    0.2.2
 DISTVERSIONPREFIX=      v
 CATEGORIES=     sysutils
 
